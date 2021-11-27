@@ -10,5 +10,4 @@ class MysiteController extends \yii\web\Controller
         $this->layout = 'mysite_layout';
         return $this->render('index');
     }
-
 }

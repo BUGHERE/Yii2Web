@@ -1,3 +1,18 @@
+<?php
+
+use yii\helpers\Html;
+use yii\grid\GridView;
+use yii\helpers\Url;
+use backend\assets\AppAsset;
+use common\widgets\Alert;
+
+/* @var $this yii\web\View */
+/* @var $searchModel backend\models\DeveloperSearch */
+/* @var $dataProvider yii\data\ActiveDataProvider */
+
+$this->title = 'Backend';
+$this->params['breadcrumbs'][] = $this->title;
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -20,6 +35,11 @@
     <!--  Light Bootstrap Table core CSS    -->
     <link href="assets/css/light-bootstrap-dashboard.css" rel="stylesheet"/>
 
+
+    <!--  CSS for Demo Purpose, don't include it in your project     -->
+    <link href="assets/css/demo.css" rel="stylesheet" />
+
+
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
@@ -41,85 +61,66 @@
     	<div class="sidebar-wrapper">
             <div class="logo">
                 <a href="#" class="simple-text">
-                    Creative Tim
+                    N   k
                 </a>
             </div>
 
             <ul class="nav">
                 <li class="active">
-                    <a href="dashboard.html">
+                    <a href="<?php echo Url::to(['/developer']) ?> ">
                         <i class="pe-7s-graph"></i>
-                        <p>Dashboard</p>
+                        <p>Developers</p>
                     </a>
                 </li>
-
+                <li class="active">
+                    <a href="<?php echo Url::to(['/info']) ?> ">
+                        <i class="pe-7s-graph"></i>
+                        <p>Infos</p>
+                    </a>
+                </li>
             </ul>
     	</div>
     </div>
 
     <div class="main-panel">
+    	
         <nav class="navbar navbar-default navbar-fixed">
             <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">Dashboard</a>
-                </div>
+               
                 <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav navbar-left">
-                        <li>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="fa fa-dashboard"></i>
-                            </a>
-                        </li>
-                    </ul>
+                    
 
                     <ul class="nav navbar-nav navbar-right">
+                        <li>
+                           <a href="<?php echo Url::to(['/developer']) ?> ">
+                               Home
+                            </a>
+                        </li>
                         <li>
                            <a href="">
                                Account
                             </a>
                         </li>
-
-
+                        <li>
+                            <a href="#">
+                                Log out
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
+        
+        <div style="padding-left: 5%;padding-right: 5%;">
 
-
-        <div class="content">
-            <div class="container-fluid">
-                <div class="row">
-
-                </div>
-            </div>
+			<?php $this->beginBody() ?>
+			    <?= Alert::widget() ?>
+			    <?= $content ?>
+			<?php $this->endBody() ?>
+                	
         </div>
-
-
-        <footer class="footer">
-            <div class="container-fluid">
-                <nav class="pull-left">
-                    <ul>
-                        <li>
-                            <a href="#">
-                                Home
-                            </a>
-                        </li>
-
-                    </ul>
-                </nav>
-                <p class="copyright pull-right">
-                    Copyright &copy; 2017.Company name All rights reserved.<a target="_blank" href="http://www.dmaku.com/moban.html">代码库</a>
-                </p>
-            </div>
-        </footer>
-
-    </div>
+        
+        </div>
 </div>
 
 
@@ -147,5 +148,21 @@
 	<!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
 	<script src="assets/js/demo.js"></script>
 
+	<script type="text/javascript">
+    	$(document).ready(function(){
+
+        	demo.initChartist();
+
+        	$.notify({
+            	icon: 'pe-7s-gift',
+            	message: "Welcome to XJBKF's Web"
+
+            },{
+                type: 'info',
+                timer: 4000
+            });
+
+    	});
+	</script>
 
 </html>

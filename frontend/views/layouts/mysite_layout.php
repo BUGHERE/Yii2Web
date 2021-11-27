@@ -9,6 +9,7 @@ use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAsset;
 use common\widgets\Alert;
+use yii\helpers\Url;
 
 AppAsset::register($this);
 ?>
@@ -24,13 +25,63 @@ AppAsset::register($this);
     <?php $this->head() ?>
 </head>
 <body>
-<?php $this->beginBody() ?>
-    <?= Breadcrumbs::widget([
-        'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-    ]) ?>
-    <?= Alert::widget() ?>
-    <?= $content ?>
-<?php $this->endBody() ?>
+        <div class="menubar">
+            <div class="menubar-content">
+                <nav class="navbar navbar-default navbar-fixed-top">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-2 col-sm-2">
+                                <div class="site-title">
+                                    <h3><span>NK</span>University</h3>
+                                </div><!-- end site-title -->
+                            </div><!-- end col-md-4 -->
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button><!-- end button -->
+                            </div><!-- end navbar-header -->
+                            <div class="col-md-10 col-sm-10 navbar-style">
+                                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                    <ul class="nav navbar-nav">
+                                        <li>
+                                            <a href="<?php echo Url::to(['/mysite']) ?>#home" class="active">主页</a>
+                                        </li>
+                                        <li>
+                                            <a href="<?php echo Url::to(['/mysite']) ?>#about">关于我们</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="<?php echo Url::to(['/mysite']) ?>#work">作品</a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="<?php echo Url::to(['/mysite']) ?>#homework">作业</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="<?php echo Url::to(['/mysite']) ?>#blog">成员</a>
+                                        </li>
+                                        <li>
+                                            <a href="<?php echo Url::to(['/mysite']) ?>#contact">联系我们</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://github.com/BUGHERE/Yii2Web">GitHub仓库</a>
+                                        </li>
+                                    </ul><!-- end nav -->
+                                </div><!-- end collapse navbar-collapse -->
+                            </div><!-- end col-md-8 -->
+                        </div><!-- end row -->
+                    </div><!-- end container-fluid -->
+                </nav><!-- navbar -->
+            </div><!-- end menubar-content -->
+        </div><!-- end menubar -->
+		<?php $this->beginBody() ?>
+		    <?= Alert::widget() ?>
+		    <?= $content ?>
+		<?php $this->endBody() ?>
 </body>
 </html>
 <?php $this->endPage() ?>

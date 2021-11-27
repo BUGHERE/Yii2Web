@@ -1,5 +1,10 @@
 <?php
 /* @var $this yii\web\View */   
+use yii\widgets\LinkPager;
+use yii\helpers\Url;
+use yii\helpers\Html;
+use yii\widgets\ActiveForm;
+use app\models\Contact;
     $this->title = 'NK';
     //include_once('index.html');
 ?>
@@ -37,55 +42,7 @@
         <div class="se-pre-con"></div><!-- ========== PRELOADER ========== -->
         <!-- ========== MENUBAR ========== -->
 
-        <div class="menubar">
-            <div class="menubar-content">
-                <nav class="navbar navbar-default navbar-fixed-top">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-2 col-sm-2">
-                                <div class="site-title">
-                                    <h3><span>NK</span>University</h3>
-                                </div><!-- end site-title -->
-                            </div><!-- end col-md-4 -->
-                            <div class="navbar-header">
-                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                                    <span class="sr-only">Toggle navigation</span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                </button><!-- end button -->
-                            </div><!-- end navbar-header -->
-                            <div class="col-md-10 col-sm-10 navbar-style">
-                                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                                    <ul class="nav navbar-nav">
-                                        <li>
-                                            <a href="#home" class="active">主页</a>
-                                        </li>
-                                        <li>
-                                            <a href="#about">关于我们</a>
-                                        </li>
 
-                                        <li>
-                                            <a href="#work">作品</a>
-                                        </li>
-
-                                        <li>
-                                            <a href="#blog">成员</a>
-                                        </li>
-                                        <li>
-                                            <a href="#contact">联系我们</a>
-                                        </li>
-                                        <li>
-                                            <a href="https://github.com/BUGHERE/Yii2Web">GitHub</a>
-                                        </li>
-                                    </ul><!-- end nav -->
-                                </div><!-- end collapse navbar-collapse -->
-                            </div><!-- end col-md-8 -->
-                        </div><!-- end row -->
-                    </div><!-- end container-fluid -->
-                </nav><!-- navbar -->
-            </div><!-- end menubar-content -->
-        </div><!-- end menubar -->
         <div class="main-page-content">
             <div id="home">
                 <div id="particles-js"></div>
@@ -197,8 +154,123 @@
             </div><!-- end about  -->
 
             <!-- ================================ WORK =============================== -->
-
+            
             <div id="work">
+                <div class="blog-content">
+                    <div class="blog-grid">
+                        <div class="blog-details wow fadeIn text-left">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="main-title text-center">
+                                            <h3>作品</h3>
+                                            <!-- <p>互联网数据库开发</p> -->
+                                            <br>
+                                            <p>XJBKF</P>
+                                            <P>我们制作了一系列有关于奥运会的图表</p>
+                                            <br><br>
+                                        </div><!-- end work-title  -->
+                                    </div><!-- end col-md-12  -->
+                                </div><!-- end row  -->
+                                <div class="row main-row">
+                                    <div class="col-md-2 col-sm-4">
+                                        <div class="post-slide">
+                                            <div class="post-img">
+                                                <a href="<?php echo Url::to(['/chart1']) ?> ">
+                                                	<img src="statics/mysite/img/about.jpg" alt="" class="about-img" title="chart1"></img>
+                                                </a>
+                                            </div><!-- end post-image  -->
+                                        </div><!-- end post-slide  -->
+                                    </div><!-- end col-md-2  --> 
+                                    <div class="col-md-2 col-sm-4">
+                                        <div class="post-slide">
+                                            <div class="post-img">
+                                                <a href="<?php echo Url::to(['/chart1']) ?> ">
+                                                	<img src="statics/mysite/img/about.jpg" alt="" class="about-img" title="chart1"></img>
+                                                </a>                                            </div><!-- end post-image  -->
+                                        </div><!-- end post-slide  -->
+                                    </div><!-- end col-md-2  -->
+                                    <div class="col-md-2 col-sm-4">
+                                        <div class="post-slide">
+                                            <div class="post-img">
+                                                <a href="<?php echo Url::to(['/chart1']) ?> ">
+                                                	<img src="statics/mysite/img/about.jpg" alt="" class="about-img" title="chart1"></img>
+                                                </a>                                            </div><!-- end post-image  -->
+                                        </div><!-- end post-slide  -->
+                                    </div><!-- end col-md-2  -->
+                                    <div class="col-md-2 col-sm-4">
+                                        <div class="post-slide">
+                                            <div class="post-img">
+                                                <a href="<?php echo Url::to(['/chart1']) ?> ">
+                                                	<img src="statics/mysite/img/about.jpg" alt="" class="about-img" title="chart1"></img>
+                                                </a>                                            </div><!-- end post-image  -->
+                                        </div><!-- end post-slide  -->
+                                    </div><!-- end col-md-2  -->
+                                    <div class="col-md-2 col-sm-4">
+                                        <div class="post-slide">
+                                            <div class="post-img">
+                                                <a href="<?php echo Url::to(['/chart1']) ?> ">
+                                                	<img src="statics/mysite/img/about.jpg" alt="" class="about-img" title="chart1"></img>
+                                                </a>                                            </div><!-- end post-image  -->
+                                        </div><!-- end post-slide  -->
+                                    </div><!-- end col-md-2  -->
+                                    <div class="col-md-2 col-sm-4">
+                                        <div class="post-slide">
+                                            <div class="post-img">
+                                                <a href="<?php echo Url::to(['/chart1']) ?> ">
+                                                	<img src="statics/mysite/img/about.jpg" alt="" class="about-img" title="chart1"></img>
+                                                </a>                                            </div><!-- end post-image  -->
+                                        </div><!-- end post-slide  -->
+                                    </div><!-- end col-md-2  -->
+                                </div><!-- end row  --> 
+                            </div><!-- end container  --> 
+                        </div><!-- end testimonials-details  -->
+                    </div><!-- end testimonial-grid  --> 
+                </div><!-- end testimonial-content  --> 
+            </div><!-- end blog  --> 
+
+            <!-- ================================ black block =============================== -->
+
+            <div class="work-counter text-left">
+                <div id="counter">
+                    <div class="container">
+                        <div class="row no-margin">
+                            <div class="col-md-3 col-sm-6 no-padding">
+                                <div class="work-statistics one text-center">
+                                    <i class="fa fa-crop stat-icon" aria-hidden="true"></i>
+                                    <!-- <h3 class="Count">2</h3> -->
+                                    <!-- <p>Graphics Design</p> -->
+                                </div><!-- end work-statistics  -->
+                            </div><!-- end col-md-3  -->
+                            <div class="col-md-3 col-sm-6 no-padding">
+                                <div class="work-statistics two text-center">
+                                    <i class="fa fa-rocket stat-icon" aria-hidden="true"></i>
+                                    <!-- <h3 class="Count">0</h3> -->
+                                    <!-- <p>Graphics Design</p> -->
+                                </div><!-- end work-statistics  -->
+                            </div><!-- end col-md-3  -->
+                            <div class="col-md-3 col-sm-6 no-padding">
+                                <div class="work-statistics three text-center">
+                                    <i class="fa fa-bolt stat-icon" aria-hidden="true"></i>
+                                    <!-- <h3 class="Count">2</h3> -->
+                                    <!-- <p>Website Created</p> -->
+                                </div><!-- end work-statistics  -->
+                            </div><!-- end col-md-3  -->
+                            <div class="col-md-3 col-sm-6 no-padding">
+                                <div class="work-statistics four text-center">
+                                    <i class="fa fa-coffee stat-icon" aria-hidden="true"></i>
+                                    <!-- <h3 class="Count">1</h3> -->
+                                    <!-- <p>Coffee Taken</p> -->
+                                </div><!-- end work-statistics  -->
+                            </div><!-- end col-md-3  -->
+                        </div><!-- end row  -->
+                    </div><!-- end container-fluid  -->
+                </div><!-- end counter  -->
+            </div><!-- end work-counter  -->
+        </div><!-- end about-content  -->
+            <!-- ================================ HOMEWORK =============================== -->
+
+            <div id="homework">
                 <div id="work-content">
                     <div class="work-grid wow fadeIn">
                         <div class="container">
@@ -213,7 +285,7 @@
                         </div><!-- end container  -->
                         <div class="work-details">
                             <div class="container" style="padding-left: 15%;padding-right: 15%;">
-                                <ul id="filters" class="clearfix" style="padding-left: 100px;">
+                                <ul id="filters" class="clearfix" style="padding-left: 5%;">
                                     <li><span class="filter active" data-filter=".web, .graphics, .development, .photography">All</span></li>
                                     <li><span class="filter" data-filter=".web">王云浩</span></li>
                                     <li><span class="filter" data-filter=".graphics">王艺杰</span></li>
@@ -221,7 +293,7 @@
                                     <li><span class="filter" data-filter=".photography">张世辰</span></li>
                                 </ul>
                                 <div id="portfoliolist">
-                                    <div class="portfolio web" data-cat="web" style="padding: 20px;">
+                                    <div class="portfolio web" data-cat="web" style="padding: 5%;">
                                         <div class="portfolio-wrapper" data-wow-delay=".2s">
                                             <div class="overlay text-center">
                                                 <div class="port-over"></div>
@@ -234,7 +306,7 @@
                                             <center><p style="color:white"><br><br><br><br>王云浩的个人作业<br><br><br><br><br></p></center>
                                         </div><!-- end portfolio-wrapper  -->
                                     </div><!-- end portfolio-graphics  -->              
-                                    <div class="portfolio graphics" data-cat="graphics" style="padding: 20px;">
+                                    <div class="portfolio graphics" data-cat="graphics" style="padding: 5%;">
                                         <div class="portfolio-wrapper" data-wow-delay=".4s">    
                                             <div class="overlay text-center">
                                                 <div class="port-over"></div>
@@ -247,7 +319,7 @@
                                             <center><p style="color:white"><br><br><br><br>王艺杰的个人作业<br><br><br><br><br></p></center>
                                         </div><!-- end portfolio-wrapper  -->
                                     </div><!-- end portfolio-web  -->   
-                                    <div class="portfolio development" data-cat="development" style="padding: 20px;">
+                                    <div class="portfolio development" data-cat="development" style="padding: 5%;">
                                         <div class="portfolio-wrapper" data-wow-delay=".6s">    
                                             <div class="overlay text-center">
                                                 <div class="port-over"></div>
@@ -260,7 +332,7 @@
                                             <center><p style="color:white"><br><br><br><br>闫晓晓的个人作业<br><br><br><br><br></p></center>
                                         </div><!-- end portfolio-wrapper  -->
                                     </div><!-- end portfolio-development  -->           
-                                    <div class="portfolio photography" data-cat="photography" style="padding: 20px;">
+                                    <div class="portfolio photography" data-cat="photography" style="padding: 5%;">
                                         <div class="portfolio-wrapper" data-wow-delay=".8s">    
                                             <div class="overlay text-center">
                                                 <div class="port-over"></div>
@@ -439,55 +511,13 @@
                     <div class="contact-grid">
                         <div class="contact-form-details">
                             <div class="container">
-                                <div class="row contactmain-row">
-                                    <div class="col-md-6 col-sm-4 no-padding-col">
-                                        <div class="google-maps">
-                                            <div class="map-wrap">
-                                                <div class="overlay-map" onClick="style.pointerEvents = 'none'"></div><!-- wrap map iframe to turn off mouse scroll and turn it back on on click -->
-                                                <div id="map" style="width:100%;height:650px"></div>
-                                            </div><!-- end map wrap  -->
-                                        </div><!-- end google map  -->
-                                    </div><!-- end col-md-6  -->
-                                    <div class="col-md-6 col-sm-8 col-xs-12 contactmain-col lastbox">
-                                        <div class="contactmiddle">
-                                            <div class="main-title white-title text-center ">
-                                                <h3>联系我们（留言功能）（设计相关表）</h3>
-                                            </div><!-- end contact-title -->
-                                            <div class="contact-form">
-                                                <form id="contactForm" class="contact-form shake" data-toggle="validator">
-                                                    <div class="form-group">
-                                                        <div class="controls">
-                                                            <input type="text" id="name" class="form-control" placeholder="Name" required data-error="Please enter your name">
-                                                            <div class="help-block with-errors"></div>
-                                                        </div><!-- end controls -->
-                                                    </div><!-- end form-group -->
-                                                    <div class="form-group">
-                                                        <div class="controls">
-                                                            <input type="email" class="email form-control" id="email" placeholder="Email" required data-error="Please enter your email">
-                                                            <div class="help-block with-errors"></div>
-                                                        </div><!-- end controls -->
-                                                    </div><!-- end form-group -->
-                                                    <div class="form-group">
-                                                        <div class="controls">
-                                                            <input type="text" id="msg_subject" class="form-control" placeholder="Subject" required data-error="Please enter your message subject">
-                                                            <div class="help-block with-errors"></div>
-                                                        </div><!-- end controls -->
-                                                    </div><!-- end form-group -->
-                                                    <div class="form-group">
-                                                        <div class="controls">
-                                                            <textarea id="message" rows="7" placeholder="Massage" class="form-control" required data-error="Write your message"></textarea>
-                                                            <div class="help-block with-errors"></div>
-                                                        </div><!-- end controls -->
-                                                    </div><!-- end form-group -->
-                                                    <button type="submit" id="submit" class="btn btn-success"> Send Message</button>
-                                                    <div id="msgSubmit" class="h3 text-center hidden"></div> 
-                                                    <div class="clearfix"></div>   
-                                                </form> 
-                                            </div><!-- end contact-form -->
-                                        </div><!-- end contactmiddle -->
-                                    </div><!-- end col-md-8  -->
-                                </div><!-- end row  -->
+                                <a style="text-decoration:none;" href="<?php echo Url::to(['/contact/create']) ?> ">
+	                                <div class="main-title white-title text-center ">
+	                                    <h3>联系我们</h3>
+	                                </div><!-- end contact-title -->
+	                            </a>
                             </div><!-- end container -->
+                            <br><br><br><br><br><br><br><br>
                             <div class="contactbottom">
                                 <div class="container text-center contact-container">
                                     <div class="row contact-row">
@@ -502,7 +532,7 @@
                                             <div class="contact-col-grid" data-wow-delay=".4s">
                                                 <i class="fa fa-envelope contact-icon" aria-hidden="true"></i>
                                                 <h3>Email</h3>
-                                                <p>1595014015@qq.com</p>
+                                                <p>1234qwer@qq.com</p>
                                             </div><!-- end contact-col  -->
                                         </div><!-- end col-md-3  -->
                                         <div class="col-md-3 col-sm-6">
