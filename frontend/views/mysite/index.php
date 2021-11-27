@@ -393,8 +393,8 @@ use app\models\Contact;
         </div><!-- end about-content  -->
 
             <!-- ================================ BLOG ========================== -->
-
-            <div id="blog">
+			<!--超过四个developer，布局会乱-->
+            <div id="blog">  
                 <div class="blog-content">
                     <div class="blog-grid">
                         <div class="blog-details wow fadeIn text-left">
@@ -408,101 +408,112 @@ use app\models\Contact;
                                         </div><!-- end work-title  -->
                                     </div><!-- end col-md-12  -->
                                 </div><!-- end row  -->
-                                <div class="row main-row">
-                                    <div class="col-md-3 col-sm-4">
-                                        <div class="post-slide">
-                                            <div class="post-img">
-                                                <a href="#"><img src="statics/mysite/img/developer1.jpg" alt=""></a>
-                                            </div><!-- end post-image  -->
-                                            <div class="post-content">
-                                                <h3 class="post-title"><a href="#">王云浩</a></h3>
-                                                <p class="post-description">
-                                                    Coding.
-                                                </p>
-                                                <ul class="post-bar">
-                                                    <li><i class="fa fa-calendar"></i> November 07, 2021</li>
-                                                    <li>
-                                                        <i class="fa fa-map-marker"></i>
-                                                        <a>天津</a>
-                                                        <a>津南</a>
-                                                    </li>
-                                                </ul>
-                                                <a href="https://bughere.github.io/" class="hvr-bounce-to-right leftbutt colorbutton">Contact Me</a>
-                                            </div><!-- end post-content  -->
-                                        </div><!-- end post-slide  -->
-                                    </div><!-- end col-md-4  --> 
-                                    <div class="col-md-3 col-sm-4">
-                                        <div class="post-slide">
-                                            <div class="post-img">
-                                                <a href="#"><img src="statics/mysite/img/developer2.jpg" alt=""></a>
-                                            </div><!-- end post-image  -->
-                                            <div class="post-content">
-                                                <h3 class="post-title"><a href="#">王艺杰</a></h3>
-                                                <p class="post-description">
-                                                    那些斑驳时光
-                                                </p>
-                                                <ul class="post-bar">
-                                                    <li><i class="fa fa-calendar"></i> June 5, 2021</li>
-                                                    <li>
-                                                        <i class="fa fa-map-marker"></i>
-                                                        <a>天津</a>
-                                                        <a>津南</a>
-                                                    </li>
-                                                </ul>
-                                                <a href="https://github.com/TheLastSavior" class="hvr-bounce-to-right leftbutt colorbutton">Contact Me</a>
-                                            </div><!-- end post-content  -->
-                                        </div><!-- end post-slide  -->
-                                    </div><!-- end col-md-4  --> 
-                                    <div class="col-md-3 col-sm-4">
-                                        <div class="post-slide">
-                                            <div class="post-img">
-                                                <a href="#"><img src="statics/mysite/img/developer3.jpg" alt=""></a>
-                                            </div><!-- end post-image  -->
-                                            <div class="post-content">
-                                                <h3 class="post-title"><a href="#">闫晓晓</a></h3>
-                                                <p class="post-description">
-                                                    一时想不起来了
-                                                </p>
-                                                <ul class="post-bar">
-                                                    <li><i class="fa fa-calendar"></i> Jan 5, 2016</li>
-                                                    <li>
-                                                        <i class="fa fa-map-marker"></i>
-                                                        <a>天津</a>
-                                                        <a>津南</a>
-                                                    </li>
-                                                </ul>
-                                                <a href="https://github.com/5-456" class="hvr-bounce-to-right leftbutt colorbutton">Contact Me</a>
-                                            </div><!-- end post-content  -->
-                                        </div><!-- end post-slide  -->
-                                    </div><!-- end col-md-4  --> 
-                                    <div class="col-md-3 col-sm-4">
-                                        <div class="post-slide">
-                                            <div class="post-img">
-                                                <a href="#"><img src="statics/mysite/img/developer4.jpg" alt=""></a>
-                                            </div><!-- end post-image  -->
-                                            <div class="post-content">
-                                                <h3 class="post-title"><a href="#">张世辰</a></h3>
-                                                <p class="post-description">
-                                                    这一行叫晚安
-                                                </p>
-                                                <ul class="post-bar">
-                                                    <li><i class="fa fa-calendar"></i> Jan 5, 2016</li>
-                                                    <li>
-                                                        <i class="fa fa-map-marker"></i>
-                                                        <a>天津</a>
-                                                        <a>津南</a>
-                                                    </li>
-                                                </ul>
-                                                <a href="https://github.com/Attractivehaha" class="hvr-bounce-to-right leftbutt colorbutton">Contact Me</a>
-                                            </div><!-- end post-content  -->
-                                        </div><!-- end post-slide  -->
-                                    </div><!-- end col-md-4  --> 
-                                </div><!-- end row  --> 
+                                <?php 
+					            	$arrlength=count($model);
+									for($x=0;$x<$arrlength;$x++)
+									{
+										echo '<div class="row main-row">
+		                                    <div class="col-md-3 col-sm-4">
+		                                        <div class="post-slide">
+		                                            <div class="post-img">
+		                                                <a href="#"><img src="statics/mysite/img/developer';
+		                                           			echo $x + 1;
+		                                                	echo '.jpg" alt=""></a>
+		                                            </div><!-- end post-image  -->
+		                                            <div class="post-content">
+		                                                <h3 class="post-title"><a href="#">';
+		                                                	echo $model[$x]->name;
+		                                                		echo '</a></h3>
+		                                                <p class="post-description">';
+		                                                    echo $model[$x]->description;
+		                                                echo '</p>
+		                                                <ul class="post-bar">
+		                                                    <li><i class="fa fa-calendar"></i>';
+		                                                    	echo $model[$x]->date;
+		                                                    		
+		                                                    	echo '</li>
+		                                                    <li>
+		                                                        <i class="fa fa-map-marker"></i>
+		                                                        <a>';
+		                                                        	echo $model[$x]->location;
+		                                                        		
+		                                                        	echo '</a>
+		                                                    </li>
+		                                                </ul>
+		                                                <a href=';
+		                                                	echo $model[$x]->contact;
+		                                                		echo 'class="hvr-bounce-to-right leftbutt colorbutton">Contact Me</a>
+		                                            </div><!-- end post-content  -->
+		                                        </div><!-- end post-slide  -->
+		                                    </div><!-- end col-md-4  --> ';
+									}
+								?>	
+                                
+                                
                             </div><!-- end container  --> 
                         </div><!-- end testimonials-details  -->
                     </div><!-- end testimonial-grid  --> 
                 </div><!-- end testimonial-content  --> 
             </div><!-- end blog  --> 
+
+            <!-- ================================ black block =============================== -->
+
+            <div class="work-counter text-left">
+                <div id="counter">
+                    <div class="container">
+                        <div class="row no-margin">
+                            <div class="col-md-3 col-sm-6 no-padding">
+                                <div class="work-statistics one text-center">
+                                    <i class="fa fa-crop stat-icon" aria-hidden="true"></i>
+                                    <!-- <h3 class="Count">2</h3> -->
+                                    <!-- <p>Graphics Design</p> -->
+                                </div><!-- end work-statistics  -->
+                            </div><!-- end col-md-3  -->
+                            <div class="col-md-3 col-sm-6 no-padding">
+                                <div class="work-statistics two text-center">
+                                    <i class="fa fa-rocket stat-icon" aria-hidden="true"></i>
+                                    <!-- <h3 class="Count">0</h3> -->
+                                    <!-- <p>Graphics Design</p> -->
+                                </div><!-- end work-statistics  -->
+                            </div><!-- end col-md-3  -->
+                            <div class="col-md-3 col-sm-6 no-padding">
+                                <div class="work-statistics three text-center">
+                                    <i class="fa fa-bolt stat-icon" aria-hidden="true"></i>
+                                    <!-- <h3 class="Count">2</h3> -->
+                                    <!-- <p>Website Created</p> -->
+                                </div><!-- end work-statistics  -->
+                            </div><!-- end col-md-3  -->
+                            <div class="col-md-3 col-sm-6 no-padding">
+                                <div class="work-statistics four text-center">
+                                    <i class="fa fa-coffee stat-icon" aria-hidden="true"></i>
+                                    <!-- <h3 class="Count">1</h3> -->
+                                    <!-- <p>Coffee Taken</p> -->
+                                </div><!-- end work-statistics  -->
+                            </div><!-- end col-md-3  -->
+                        </div><!-- end row  -->
+                    </div><!-- end container-fluid  -->
+                </div><!-- end counter  -->
+            </div><!-- end work-counter  -->
+            
+            <!-- ================================ INFO =============================== -->
+            
+            <div id="info">  
+	        	<?php 
+	            	$arrlength=count($infoModel);
+					for($x=0;$x<$arrlength;$x++)
+					{
+						echo '<center><div class="contactbottom"><div class="container text-center contact-container"><ul class="list-group">';
+						echo '<li class="list-group-item" ><h3>';
+						echo $infoModel[$x]->subject;
+						echo "\n\n";
+						echo "</h3>";
+						echo "<p>";
+						echo $infoModel[$x]->message;
+						echo "</p></li>";
+						echo '</center></ul></div></div>';
+					}
+				?>			
+            </div>
 
             <!-- ================================ CONTACT =============================== -->
 

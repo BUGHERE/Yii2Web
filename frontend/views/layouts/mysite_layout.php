@@ -64,6 +64,10 @@ AppAsset::register($this);
                                         <li>
                                             <a href="<?php echo Url::to(['/mysite']) ?>#blog">成员</a>
                                         </li>
+                                        
+                                        <li>
+                                            <a href="<?php echo Url::to(['/mysite']) ?>#info">通知</a>
+                                        </li>
                                         <li>
                                             <a href="<?php echo Url::to(['/mysite']) ?>#contact">联系我们</a>
                                         </li>

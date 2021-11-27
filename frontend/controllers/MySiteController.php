@@ -3,6 +3,7 @@
 namespace frontend\controllers;
 use app\models\Contact;
 use app\models\Developer;
+use app\models\Info;
 use frontend\models\DeveloperSearch;
 use Yii;
 
@@ -11,10 +12,14 @@ class MysiteController extends \yii\web\Controller
     public $layout = 'mysite_layout';
     public function actionIndex()
     {
-        $searchModel = new DeveloperSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+//      $searchModel = new DeveloperSearch();
+//      $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        
+        $model = Developer::find()->all();
+        $infoModel = Info::find()->all(); 
         return $this->render('index', [
-            'searchModel' => $searchModel,
+            'model' => $model,
+            'infoModel' => $infoModel,
         ]);
     }
     public function actionForm()
