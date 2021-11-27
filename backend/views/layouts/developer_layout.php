@@ -97,12 +97,12 @@ $this->params['breadcrumbs'][] = $this->title;
                             </a>
                         </li>
                         <li>
-                           <a href="<?php echo Url::to(['/developer']) ?>">
-                               Account
+                           <a href="frontend">
+                               Frontend
                             </a>
                         </li>
                         <li>
-                            <a href="<?php echo Url::to(['/developer/login']) ?>">
+                            <a href="<?php echo Url::to(['/site']) ?>">
                                 Log in
                             </a>
                         </li>

@@ -12,7 +12,6 @@ use common\models\LoginForm;
  */
 class SiteController extends Controller
 {
-    public $layout = 'mysite_layout';
     /**
      * {@inheritdoc}
      */

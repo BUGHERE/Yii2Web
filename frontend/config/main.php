@@ -37,15 +37,15 @@ return [
             'errorAction' => 'site/error',
         ],
         
-        'urlManager' => [
-            //'enablePrettyUrl' => true,
-            //'showScriptName' => false,
-            'enableStrictParsing' => true,
-            'rules' => [            
-            	'/mysite' => '/mysite/index',
-    			"<controller:\w+>/<action:\w+>"=>"<controller>/<action>",
-            ],
-        ],
+//      'urlManager' => [
+//          //'enablePrettyUrl' => true,
+//          //'showScriptName' => false,
+//          'enableStrictParsing' => true,
+//          'rules' => [            
+//          	'/mysite' => '/mysite/index',
+//  			"<controller:\w+>/<action:\w+>"=>"<controller>/<action>",
+//          ],
+//      ],
         
     ],
     'params' => $params,
