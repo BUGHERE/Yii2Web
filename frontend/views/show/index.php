@@ -282,6 +282,20 @@ use app\models\Contact;
             <div id="homework">
                 <div id="work-content">
                     <div class="work-grid wow fadeIn">
+                    	<div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="main-title text-center">
+                                        <h3>团队作业</h3>
+                                        <p>XJBKF</p>
+                                    </div><!-- end work-title  -->
+                                </div><!-- end col-md-12  -->
+                            </div><!-- end row  -->
+                        </div><!-- end container  -->
+                        <center>
+                        	<a href="statics/mysite/download/homework_team.zip" class="hvr-bounce-to-right leftbutt colorbutton">团队作业</a>
+                        </center>
+                        <br><br><br><br><br><br>
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12">
@@ -295,7 +309,7 @@ use app\models\Contact;
                         <div class="work-details">
                             <div class="container" style="padding-left: 15%;padding-right: 15%;">
                                 <ul id="filters" class="clearfix" style="padding-left: 5%;">
-                                    <li><span class="filter active" data-filter=".web, .graphics, .development, .photography">All</span></li>
+                                    <li><span class="filter active" data-filter=".web, .graphics, .development, .photography .team">All</span></li>
                                     <li><span class="filter" data-filter=".web">王云浩</span></li>
                                     <li><span class="filter" data-filter=".graphics">王艺杰</span></li>
                                     <li><span class="filter" data-filter=".development">闫晓晓</span></li>
@@ -449,9 +463,9 @@ use app\models\Contact;
 		                                                        	echo '</a>
 		                                                    </li>
 		                                                </ul>
-		                                                <a href=';
+		                                                <a href="';
 		                                                	echo $model[$x]->contact;
-		                                                		echo 'class="hvr-bounce-to-right leftbutt colorbutton">Contact Me</a>
+		                                                		echo '" class="hvr-bounce-to-right leftbutt colorbutton">Contact Me</a>
 		                                            </div><!-- end post-content  -->
 		                                        </div><!-- end post-slide  -->
 		                                    </div><!-- end col-md-4  --> ';
