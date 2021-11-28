@@ -1,4 +1,9 @@
 <?php
+/**
+ * Team:XJBKF,NKU
+ * coding by wangyunhao 1911481
+ * 20211127
+ */
 namespace frontend\controllers;
 
 use frontend\models\ResendVerificationEmailForm;
@@ -21,7 +26,7 @@ use frontend\models\ContactForm;
 class SiteController extends Controller
 {
 
-    public $layout = 'main';
+    public $layout = 'contact_layout';
 
     /**
      * {@inheritdoc}

@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * Team:XJBKF,NKU
+ * coding by wangyunhao 1911481
+ * 20211127
+ */
 use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\helpers\Url;
@@ -44,7 +48,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
     <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
-
+	    <script src="echarts/js/echarts.min.js"></script>
+    <script src="echarts/js/jquery.js"></script>
 </head>
 <body>
 
@@ -67,45 +72,45 @@ $this->params['breadcrumbs'][] = $this->title;
 
             <ul class="nav">
             	<li class="active">
-                    <a href="<?php echo Url::to(['/chart1']) ?> ">
+                    <a href="<?php echo Url::to(['/echart2016interval-num']) ?> ">
                         <i class="pe-7s-graph"></i>
-                        <p>[chart]</p>
+                        <p>2016年派出运动员区间个数</p>
                     </a>
                 </li>
             	<li class="active">
-                    <a href="<?php echo Url::to(['/chart2']) ?> ">
+                    <a href="<?php echo Url::to(['/echart-athlete-num']) ?> ">
                         <i class="pe-7s-graph"></i>
-                        <p>chart</p>
+                        <p>运动员逐年变化情况</p>
                     </a>
                 </li>
             	<li class="active">
-                    <a href="<?php echo Url::to(['/chart3']) ?> ">
+                    <a href="<?php echo Url::to(['/echart-china-medal-num']) ?> ">
                         <i class="pe-7s-graph"></i>
-                        <p>chart</p>
+                        <p>中国奖牌数量</p>
                     </a>
                 </li>
             	<li class="active">
-                    <a href="<?php echo Url::to(['/chart4']) ?> ">
+                    <a href="<?php echo Url::to(['/echart-country-medal-top10']) ?> ">
                         <i class="pe-7s-graph"></i>
-                        <p>chart</p>
+                        <p>奖牌总数前十国家奖牌分布</p>
                     </a>
                 </li>
             	<li class="active">
-                    <a href="<?php echo Url::to(['/chart5']) ?> ">
+                    <a href="<?php echo Url::to(['/echart-news']) ?> ">
                         <i class="pe-7s-graph"></i>
-                        <p>chart</p>
+                        <p>新闻发表数变化趋势</p>
                     </a>
                 </li>
             	<li class="active">
-                    <a href="<?php echo Url::to(['/chart6']) ?> ">
+                    <a href="<?php echo Url::to(['/echart-news-comment']) ?> ">
                         <i class="pe-7s-graph"></i>
-                        <p>chart</p>
+                        <p>新闻评论数展示</p>
                     </a>
                 </li>
                 <li class="active">
                     <a href="<?php echo Url::to(['/contact']) ?> ">
                         <i class="pe-7s-graph"></i>
-                        <p>contact</p>
+                        <p>联系我们</p>
                     </a>
                 </li>
             </ul>
@@ -134,6 +139,12 @@ $this->params['breadcrumbs'][] = $this->title;
 			<?php $this->endBody() ?>
                 	
         </div>
+        
+        <div align="right">
+	        <btn class="btn btn-lg">
+	            <a href="<?php echo Url::to(['/show']) ?> " sytle="color:white;" >主页</a>
+	        </btn>
+	    </div>
         
         </div>
 </div>

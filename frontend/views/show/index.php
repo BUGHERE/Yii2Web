@@ -1,4 +1,9 @@
 <?php
+/**
+ * Team:XJBKF,NKU
+ * coding by wangyunhao 1911481
+ * 20211127
+ */
 /* @var $this yii\web\View */   
 use yii\widgets\LinkPager;
 use yii\helpers\Url;
@@ -22,8 +27,7 @@ use app\models\Contact;
         <link rel="stylesheet" href="statics/mysite/css/site.css">
         <link rel="stylesheet" href="statics/mysite/css/bootstrap.min.css">
         <link rel="stylesheet" href="statics/mysite/css/font-awesome.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Ubuntu:500" rel="stylesheet"> 
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
+        
         <link rel="stylesheet" href="statics/mysite/assets/css/bootstrap.min.css" type="text/css" media="screen">
         <link rel="stylesheet" type="text/css" href="statics/mysite/assets/css/animate.css" media="screen">
         <link href="statics/mysite/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
@@ -102,12 +106,11 @@ use app\models\Contact;
                                 <div class="col-md-8 col-sm-6 col-xs-12 about-col">
                                     <div class="about-details">
                                         <br>
-                                        <h3>大家好  我们是XJBKF开发小组</h3>
+                                        <h3>大家好</b3><br><br>
+                                        <b3>我们是XJBKF(咸煎饼)开发小组</h3>
                                         <br>
-                                        <p>这是我们小组的作品展示</p>
-                                        <p>在这个网站上，你可以下载浏览我们的课程作业</p>
+                                        <p>在这个网站上，你可以浏览我们的作品和课程作业</p>
                                         <p>如果你感兴趣，欢迎前往我们的GitHUb仓库，查看更详细的信息！</p>
-                                        <br><br>
                                         <a href="https://github.com/BUGHERE/Yii2Web" class="hvr-bounce-to-right leftbutt colorbutton">Contact Us</a>
                                     </div><!-- end about-details  -->
                                 </div><!-- end col-md-8  -->
@@ -176,8 +179,9 @@ use app\models\Contact;
                                     <div class="col-md-2 col-sm-4">
                                         <div class="post-slide">
                                             <div class="post-img">
-                                                <a href="<?php echo Url::to(['/chart1']) ?> ">
-                                                	<img src="statics/mysite/img/about.jpg" alt="" class="about-img" title="chart1"></img>
+                                            	<center><h3>01</h3></center>
+                                                <a href="<?php echo Url::to(['/echart2016interval-num']) ?> ">
+                                                	<img src="statics/mysite/img/chart1.png" alt="" class="about-img" title="2016年派出运动员区间个数"></img>
                                                 </a>
                                             </div><!-- end post-image  -->
                                         </div><!-- end post-slide  -->
@@ -185,40 +189,45 @@ use app\models\Contact;
                                     <div class="col-md-2 col-sm-4">
                                         <div class="post-slide">
                                             <div class="post-img">
-                                                <a href="<?php echo Url::to(['/chart1']) ?> ">
-                                                	<img src="statics/mysite/img/about.jpg" alt="" class="about-img" title="chart1"></img>
+                                            	<center><h3>02</h3></center>
+                                                <a href="<?php echo Url::to(['/echart-athlete-num']) ?> ">
+                                                	<img src="statics/mysite/img/chart2.png" alt="" class="about-img" title="运动员逐年变化情况"></img>
                                                 </a>                                            </div><!-- end post-image  -->
                                         </div><!-- end post-slide  -->
                                     </div><!-- end col-md-2  -->
                                     <div class="col-md-2 col-sm-4">
                                         <div class="post-slide">
                                             <div class="post-img">
-                                                <a href="<?php echo Url::to(['/chart1']) ?> ">
-                                                	<img src="statics/mysite/img/about.jpg" alt="" class="about-img" title="chart1"></img>
+                                            	<center><h3>03</h3></center>
+                                                <a href="<?php echo Url::to(['/echart-china-medal-num']) ?> ">
+                                                	<img src="statics/mysite/img/chart3.png" alt="" class="about-img" title="中国奖牌数量"></img>
                                                 </a>                                            </div><!-- end post-image  -->
                                         </div><!-- end post-slide  -->
                                     </div><!-- end col-md-2  -->
                                     <div class="col-md-2 col-sm-4">
                                         <div class="post-slide">
                                             <div class="post-img">
-                                                <a href="<?php echo Url::to(['/chart1']) ?> ">
-                                                	<img src="statics/mysite/img/about.jpg" alt="" class="about-img" title="chart1"></img>
+                                            	<center><h3>04</h3></center>
+                                                <a href="<?php echo Url::to(['/echart-country-medal-top10']) ?> ">
+                                                	<img src="statics/mysite/img/chart4.png" alt="" class="about-img" title="奖牌总数前十国家奖牌分布"></img>
                                                 </a>                                            </div><!-- end post-image  -->
                                         </div><!-- end post-slide  -->
                                     </div><!-- end col-md-2  -->
                                     <div class="col-md-2 col-sm-4">
                                         <div class="post-slide">
                                             <div class="post-img">
-                                                <a href="<?php echo Url::to(['/chart1']) ?> ">
-                                                	<img src="statics/mysite/img/about.jpg" alt="" class="about-img" title="chart1"></img>
+                                            	<center><h3>05</h3></center>
+                                                <a href="<?php echo Url::to(['/echart-news']) ?> ">
+                                                	<img src="statics/mysite/img/chart5.png" alt="" class="about-img" title="新闻发表数变化趋势"></img>
                                                 </a>                                            </div><!-- end post-image  -->
                                         </div><!-- end post-slide  -->
                                     </div><!-- end col-md-2  -->
                                     <div class="col-md-2 col-sm-4">
                                         <div class="post-slide">
                                             <div class="post-img">
-                                                <a href="<?php echo Url::to(['/chart1']) ?> ">
-                                                	<img src="statics/mysite/img/about.jpg" alt="" class="about-img" title="chart1"></img>
+                                            	<center><h3>06</h3></center>
+                                                <a href="<?php echo Url::to(['/echart-news-comment']) ?> ">
+                                                	<img src="statics/mysite/img/chart6.png" alt="" class="about-img" title="新闻评论数展示"></img>
                                                 </a>                                            </div><!-- end post-image  -->
                                         </div><!-- end post-slide  -->
                                     </div><!-- end col-md-2  -->

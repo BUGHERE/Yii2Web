@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * Team:XJBKF,NKU
+ * coding by wangyunhao 1911481
+ * 20211127
+ */
 use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\helpers\Url;
@@ -16,7 +20,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Contact', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('联系我们', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
@@ -36,12 +40,5 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
-
-    <div align="right">
-        <btn class="btn btn-lg">
-            <a href="<?php echo Url::to(['/mysite']) ?> " sytle="color:white">back</a>
-        </btn>
-    </div>
-
 
 </div>
