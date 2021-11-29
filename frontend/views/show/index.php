@@ -309,7 +309,7 @@ use app\models\Contact;
                         <div class="work-details">
                             <div class="container" style="padding-left: 15%;padding-right: 15%;">
                                 <ul id="filters" class="clearfix" style="padding-left: 5%;">
-                                    <li><span class="filter active" data-filter=".web, .graphics, .development, .photography .team">All</span></li>
+                                    <li><span class="filter active" data-filter=".web, .graphics, .development, .photography">All</span></li>
                                     <li><span class="filter" data-filter=".web">王云浩</span></li>
                                     <li><span class="filter" data-filter=".graphics">王艺杰</span></li>
                                     <li><span class="filter" data-filter=".development">闫晓晓</span></li>
@@ -431,12 +431,13 @@ use app\models\Contact;
                                         </div><!-- end work-title  -->
                                     </div><!-- end col-md-12  -->
                                 </div><!-- end row  -->
+                                <div class="row main-row">
                                 <?php 
 					            	$arrlength=count($model);
 									for($x=0;$x<$arrlength;$x++)
 									{
-										echo '<div class="row main-row">
-		                                    <div class="col-md-3 col-sm-4">
+										echo '
+		                                    <div class="col-md-3 col-sm-6">
 		                                        <div class="post-slide">
 		                                            <div class="post-img">
 		                                                <a href="#"><img src="statics/mysite/img/developer';
@@ -468,8 +469,9 @@ use app\models\Contact;
 		                                                		echo '" class="hvr-bounce-to-right leftbutt colorbutton">Contact Me</a>
 		                                            </div><!-- end post-content  -->
 		                                        </div><!-- end post-slide  -->
-		                                    </div><!-- end col-md-4  --> ';
+		                                    </div><!-- end col-md-4  -->';
 									}
+									
 								?>	
                                 
                                 

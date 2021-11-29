@@ -51,29 +51,29 @@ AppAsset::register($this);
                                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                     <ul class="nav navbar-nav">
                                         <li>
-                                            <a href="<?php echo Url::to(['/show']) ?>#home" class="active">主页</a>
+                                            <a href="#home" class="active">主页</a>
                                         </li>
                                         <li>
-                                            <a href="<?php echo Url::to(['/show']) ?>#about">关于我们</a>
-                                        </li>
-
-                                        <li>
-                                            <a href="<?php echo Url::to(['/show']) ?>#work">作品</a>
-                                        </li>
-                                        
-                                        <li>
-                                            <a href="<?php echo Url::to(['/show']) ?>#homework">作业</a>
+                                            <a href="#about">关于我们</a>
                                         </li>
 
                                         <li>
-                                            <a href="<?php echo Url::to(['/show']) ?>#blog">成员</a>
+                                            <a href="#work">作品</a>
                                         </li>
                                         
                                         <li>
-                                            <a href="<?php echo Url::to(['/show']) ?>#info">通知</a>
+                                            <a href="#homework">作业</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#blog">成员</a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="#info">通知</a>
                                         </li>
                                         <li>
-                                            <a href="<?php echo Url::to(['/show']) ?>#contact">联系我们</a>
+                                            <a href="#contact">联系我们</a>
                                         </li>
                                         <li>
                                             <a href="https://github.com/BUGHERE/Yii2Web">GitHub仓库</a>
